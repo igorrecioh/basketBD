@@ -1,8 +1,7 @@
-sudo: false
+sudo: required
 language: cpp
-compiler:
-  - gcc
-  - clang
+before_script:
+  - sudo apt install cmake
 script:
   - mkdir build && cd build
   - cmake ..
