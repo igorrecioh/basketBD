@@ -5,4 +5,6 @@ WORKDIR /home/root/
 RUN \
 apt update -qq && apt upgrade -y
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+RUN apt install g++ -y
+
+RUN g++ main.cpp -o main -lsqlite3
