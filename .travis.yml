@@ -4,10 +4,10 @@ services:
   - docker
 
 before_script:
-  - ls
-  - mv ../* /tmp
+  - mkdir /tmp/basket
+  - mv * /tmp/basket
   - cd .ci
 
 script:
-  - docker build . -t basket_bd
-  - docker run -it -v /tmp:/home/root basket_bd
+  - docker build -t basket_bd .
+  - docker run -it -v /tmp/basket:/home/root basket_bd
