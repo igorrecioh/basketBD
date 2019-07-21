@@ -9,4 +9,4 @@ before_script:
 
 script:
   - docker build . -t basket_bd
-  - docker run -v /tmp/hrim:/home/root basket_bd
+  - docker run -v /tmp:/home/root basket_bd
