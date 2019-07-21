@@ -1,21 +1,13 @@
-sudo: false
-language: cpp
-compiler:
-  - gcc
-  - clang
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - llvm-toolchain-precise-3.8
-    packages:
-      - g++-6
-      - clang-3.8
-install:
-  - "[ $CXX = g++ ] && export CXX=g++-6 || true"
-  - "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"
+sudo: required
+dist: xenial
+services:
+  - docker
+
+before_script:
+  - mkdir /tmp
+  - mv ../* /tmp
+  - cd .ci
+
 script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make
+  - docker build . -t basket_bd
+  - docker run -v /tmp/hrim:/home/root basket_bd
