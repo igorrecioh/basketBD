@@ -8,3 +8,5 @@ apt update -qq && apt upgrade -y
 RUN apt install g++ -y
 
 #RUN g++ /home/root/main.cpp -o main -lsqlite3
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
