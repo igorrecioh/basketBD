@@ -6,4 +6,5 @@ RUN \
 apt update -qq && apt upgrade -y
 
 RUN apt install g++ -y
-RUN g++ /home/root/main.cpp -o main -lsqlite3
+
+#RUN g++ /home/root/main.cpp -o main -lsqlite3
