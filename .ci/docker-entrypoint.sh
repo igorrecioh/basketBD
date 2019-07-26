@@ -2,7 +2,7 @@
 
 cd /home/root || exit
 cmake --version
-sudo apt upgrade cmake
+apt upgrade cmake
 cmake --version
 mkdir build && cd build
 cmake .. && make
