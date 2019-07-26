@@ -6,6 +6,7 @@ services:
 before_script:
   - mkdir /tmp/basket
   - mv main.cpp /tmp/basket
+  - mv CMakeLists.txt /tmp/basket
   - cd .ci
 
 script:
