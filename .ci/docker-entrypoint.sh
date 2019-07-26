@@ -5,7 +5,7 @@ cmake --version
 apt remove cmake
 add-apt-repository -y ppa:george-edison55/cmake-3.x
 apt update
-apt install cmake
+apt install cmake -y
 cmake --version
 mkdir build && cd build
 cmake .. && make
