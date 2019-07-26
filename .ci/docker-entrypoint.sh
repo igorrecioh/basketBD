@@ -1,10 +1,9 @@
 #!/bin/bash
 
 cd /home/root || exit
-apt install wget
 wget https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1-Linux-x86_64.tar.gz
 tar -zxvf cmake-3.15.1-Linux-x86_64.tar.gz
-cd cmake-3.15.1
+cd cmake-3.15.1-Linux-x86_64
 ./bootstrap
 make
 make install
